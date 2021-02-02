@@ -96,7 +96,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         queryString += ";";
 
         //query database
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(queryString, placeholderValues);
 
         return cursor;
