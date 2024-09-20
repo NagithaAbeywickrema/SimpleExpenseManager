@@ -1,10 +1,8 @@
 # SimpleExpenseManager
-This is an android based basic expense manager application which will be used as a lab assignment for CS3042 - Database Systems course module.
+This is an android based basic expense manager application which is a lab assignment for CS3042 - Database Systems course module.
 
 ## Description
-During this assignment we will be self-learning how to use an embedded database in an android application. This project is an android application that act as a skeleton. Following is the structure of the application.
-
-![Project Structure](https://photos-6.dropbox.com/t/2/AABUCZrAwldw_NV3Ifvnp7oC4gSKnSgQpobs4XewmqyOfw/12/9253042/png/32x32/3/1449064800/0/2/simpleexpensemanager_project_structure.png/EICo8gYY42wgAigC/W5KIhq-w862dGqauYIvo4akPhVyFsdz4o9X_TOOCnjA?size_mode=3&size=1024x768)
+During this assignment we will be self-learning how to use an embedded database in an android application. This project is an android application that act as a skeleton.
 
 The current implementation is non-persistent. Therefore all the account information and transactions are stored in the memory and once the application is closed, the information is lost.
 
@@ -18,14 +16,14 @@ After you have completed implementation of the [`ExpenseManager`](/app/src/main/
 
 eg:
 
-Current implementation
+Non-persistent implementation
 ``` Java
 /***  Begin generating dummy data for In-Memory implementation  ***/
 expenseManager = new InMemoryDemoExpenseManager();
 /*** END ***/
 ```
 
-Your implementation
+Persistent implementation
 ``` Java
 /***  Setup the persistent storage implementation  ***/
 expenseManager = new PersistentExpenseManager(context);
@@ -43,13 +41,13 @@ You can make improvements to the project as you require. However this project is
 4. Extend and implement the `setup()` method of the abstract class [`ExpenseManager`](/app/src/main/java/lk/ac/mrt/cse/dbs/simpleexpensemanager/control/ExpenseManager.java).
 5. Change current implementation to your implementation in the [`MainActivity`](/app/src/main/java/lk/ac/mrt/cse/dbs/simpleexpensemanager/ui/MainActivity.java) ui class.
 
-  Current implementation
+  Non-persistent implementation
   ```Java
   /***  Begin generating dummy data for In-Memory implementation  ***/
   expenseManager = new InMemoryDemoExpenseManager();
   /*** END ***/
   ```
-  Your implementation
+  Persistent implementation
   ```Java
   /***  Setup the persistent storage implementation  ***/
   expenseManager = new PersistentExpenseManager(context);
